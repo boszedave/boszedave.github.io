@@ -1,91 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy - Kúturu App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    a {
-      color: #0066cc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policies</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-tabs {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+        
+        .nav-tab {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-tab.active {
+            color: #007AFF;
+            border-bottom-color: #007AFF;
+            font-weight: 600;
+        }
+        
+        .nav-tab:hover {
+            color: #007AFF;
+        }
+        
+        .policy-content {
+            display: none;
+        }
+        
+        .policy-content.active {
+            display: block;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        h2 {
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        p, li {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+        
+        .app-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .nav-tab {
+                text-align: left;
+                border-bottom: 1px solid #e0e0e0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showPolicy('radiova')">
+                <img src="radiova-icon.png" alt="Radiova" class="app-icon" onerror="this.style.display='none'">
+                Radiova
+            </button>
+            <button class="nav-tab" onclick="showPolicy('yourapp')">
+                <img src="yourapp-icon.png" alt="Your App" class="app-icon" onerror="this.style.display='none'">
+                Your App
+            </button>
+            <!-- Add more tabs for additional apps -->
+        </div>
 
-  <h1>Privacy Policy</h1>
+        <!-- Radiova Privacy Policy -->
+        <div id="radiova-policy" class="policy-content active">
+            <div class="app-title">
+                <img src="radiova-icon.png" alt="Radiova" class="app-icon" onerror="this.style.display='none'">
+                <h1>Privacy Policy for Radiova</h1>
+            </div>
+            
+            <p><strong>Last updated:</strong> [Current Date]</p>
 
-  <p><strong>David Bosze</strong> built the Kúturu app as a Free app. This SERVICE is provided by David Bosze at no cost and is intended for use as is.</p>
+            <h2>Introduction</h2>
+            <p>Welcome to Radiova ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you understand how we collect, use, and safeguard your information when you use our radio streaming application.</p>
+            
+            <p>This Privacy Policy explains how we handle your data when you use Radiova, a mobile application that allows you to discover and stream radio stations from around the world.</p>
 
-  <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.</p>
+            <h2>Information We Collect</h2>
+            
+            <h3>Information You Provide</h3>
+            <ul>
+                <li><strong>Favorites:</strong> We store your favorite radio stations locally on your device to provide personalized recommendations.</li>
+                <li><strong>Preferences:</strong> Your app settings and preferences are stored locally on your device.</li>
+            </ul>
 
-  <p>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.</p>
+            <h3>Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device Information:</strong> We collect basic device information such as device type, operating system version, and app version to ensure compatibility and provide support.</li>
+                <li><strong>Usage Data:</strong> We collect anonymous usage statistics to improve our service.</li>
+                <li><strong>Location Data:</strong> With your explicit permission, we collect your approximate location to show nearby radio stations on the map.</li>
+            </ul>
 
-  <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Kútguru unless otherwise defined in this Privacy Policy.</p>
+            <h3>Third-Party Services</h3>
+            <p>We use the following third-party services:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> To display advertisements in the free version</li>
+                <li><strong>RevenueCat:</strong> To process premium subscriptions</li>
+                <li><strong>Mapbox:</strong> To provide mapping services</li>
+                <li><strong>Radio Browser API:</strong> To provide radio station data</li>
+            </ul>
 
-  <h2>Information Collection and Use</h2>
+            <h2>How We Use Your Information</h2>
+            <ul>
+                <li>Stream radio stations and display maps</li>
+                <li>Manage your favorites and preferences</li>
+                <li>Process premium subscriptions</li>
+                <li>Display relevant advertisements</li>
+                <li>Improve app functionality and user experience</li>
+            </ul>
 
-  <p>For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to IP address, User product interactions, Diagnostic information, Device and Account identifiers. The information that I request will be retained on your device and is not collected by me in any way.</p>
+            <h2>Data Storage and Security</h2>
+            <ul>
+                <li>Your favorites and preferences are stored locally on your device</li>
+                <li>We implement appropriate security measures to protect your information</li>
+                <li>Data is encrypted in transit and at rest</li>
+            </ul>
 
-  <p>The app does use third-party services that may collect information used to identify you.</p>
+            <h2>Your Rights and Choices</h2>
+            <ul>
+                <li>You can enable or disable location access in your device settings</li>
+                <li>Free users can upgrade to premium to remove ads</li>
+                <li>You can manage your subscription through RevenueCat</li>
+            </ul>
 
-  <p>Link to the privacy policy of third-party service providers used by the app:</p>
-  <ul>
-    <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-    <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li>
-  </ul>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <p><strong>Email:</strong> [Your Contact Email]<br>
+            <strong>Address:</strong> [Your Business Address]</p>
+        </div>
 
-  <h2>Log Data</h2>
+        <!-- Your App Privacy Policy -->
+        <div id="yourapp-policy" class="policy-content">
+            <div class="app-title">
+                <img src="yourapp-icon.png" alt="Your App" class="app-icon" onerror="this.style.display='none'">
+                <h1>Privacy Policy for Your App</h1>
+            </div>
+            
+            <p><strong>Last updated:</strong> [Current Date]</p>
 
-  <p>I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.</p>
+            <h2>Introduction</h2>
+            <p>Welcome to Your App ("we," "our," or "us"). This Privacy Policy explains how we handle your data when you use our application.</p>
 
-  <h2>Cookies</h2>
+            <!-- Add your other app's privacy policy content here -->
+            <p>[Your other app's privacy policy content goes here...]</p>
+        </div>
 
-  <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
+        <!-- Add more policy sections for additional apps -->
+    </div>
 
-  <p>This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
+    <script>
+        function showPolicy(appName) {
+            // Hide all policy contents
+            const policies = document.querySelectorAll('.policy-content');
+            policies.forEach(policy => {
+                policy.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.nav-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected policy
+            const selectedPolicy = document.getElementById(appName + '-policy');
+            if (selectedPolicy) {
+                selectedPolicy.classList.add('active');
+            }
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
 
-  <h2>Service Providers</h2>
-
-  <p>I may employ third-party companies and individuals due to the following reasons:</p>
-  <ul>
-    <li>To facilitate our Service;</li>
-    <li>To provide the Service on our behalf;</li>
-    <li>To perform Service-related services; or</li>
-    <li>To assist us in analyzing how our Service is used.</li>
-  </ul>
-
-  <p>I want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-
-  <h2>Security</h2>
-
-  <p>I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.</p>
-
-  <h2>Links to Other Sites</h2>
-
-  <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-
-  <h2>Children’s Privacy</h2>
-
-  <p>These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13 years of age. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do the necessary actions.</p>
-
-  <h2>Changes to This Privacy Policy</h2>
-
-  <p>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.</p>
-
-  <p>This policy is effective as of <strong>2022-08-18</strong></p>
-
-  <h2>Contact Us</h2>
-
-  <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at <a href="mailto:dvainsolutions@gmail.com">dvainsolutions@gmail.com</a>.</p>
+        // Set default policy based on URL parameter
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const app = urlParams.get('app');
+            if (app) {
+                showPolicy(app);
+            }
+        }
+    </script>
 </body>
-</html>
+</html> 
