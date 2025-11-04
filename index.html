@@ -527,14 +527,15 @@
             <h1>Privacy Policy for Elf Maker</h1>
         </div>
 
-        <p><strong>Effective date:</strong> October 30, 2025</p>
+        <p><strong>Effective date:</strong> November 1, 2025</p>
         <p>This Privacy Policy explains how <strong>Dvain Solutions</strong> ("we", "us", "our") collects, uses, and protects information when you use the Elf Maker mobile application ("App").</p>
 
         <h2>1) Information We Collect</h2>
-        <h3>Images You Choose to Upload</h3>
+        <h3>Images and Face Data You Choose to Upload</h3>
         <ul>
-            <li>Only the photos you explicitly select are processed.</li>
-            <li>Images are prepared locally on your device and then sent via our secure proxy to our AI processing provider to generate the elf transformation.</li>
+            <li>Only the photos you explicitly select are processed. These photos may contain facial features and biometric data (face data).</li>
+            <li>Images containing face data are prepared locally on your device and then sent via our secure proxy to our AI processing provider (OpenAI) to generate the elf transformation.</li>
+            <li>We do not collect or extract biometric identifiers separately from the images you provide. Face data is contained within the images you choose to upload.</li>
         </ul>
         <h3>Subscription Status</h3>
         <ul>
@@ -545,12 +546,15 @@
             <li>Basic, non-identifying diagnostics (feature usage, crashes) and generic device info (model, OS version) to improve reliability.</li>
         </ul>
 
-        <h2>2) How Your Images Are Used</h2>
+        <h2>2) How Your Images and Face Data Are Used</h2>
+        <h3>Face Data Collection and Use</h3>
         <ul>
-            <li><strong>On-device:</strong> Selected photos are resized/optimized locally.</li>
-            <li><strong>Cloud processing:</strong> Images are transmitted to OpenAI’s API through our secure Cloudflare Worker proxy solely to generate the transformation.</li>
-            <li><strong>Storage:</strong> Transformed images and originals are stored <em>locally on your device</em> for your in‑app gallery. Images are saved to your Photos library only if you tap <em>Save to Photos</em>.</li>
-            <li><strong>Servers:</strong> We do not persist images on our servers. OpenAI processes your images transiently (see Third‑Party Services).</li>
+            <li><strong>Collection:</strong> Face data is collected only when you explicitly choose to upload a photo containing facial features. We do not automatically detect or collect face data from your device.</li>
+            <li><strong>Purpose:</strong> Face data is used solely to generate the requested elf transformation while keeping the person's face recognizable in the transformed image.</li>
+            <li><strong>On-device processing:</strong> Selected photos containing face data are resized and optimized locally on your device before transmission.</li>
+            <li><strong>Cloud processing:</strong> Images containing face data are transmitted to OpenAI's API through our secure Cloudflare Worker proxy solely to generate the transformation. The transformation process requires face data to create a recognizable elf version of the person in the image.</li>
+            <li><strong>Storage:</strong> Transformed images (which may contain face data) and original images are stored <em>locally on your device</em> for your in‑app gallery. Images are saved to your Photos library only if you tap <em>Save to Photos</em>.</li>
+            <li><strong>Servers:</strong> We do not persist images containing face data on our servers. OpenAI processes your images transiently (see Third‑Party Services and Data Retention sections).</li>
         </ul>
 
         <h2>3) Subscriptions, “Unlimited” Access, and Fair Use</h2>
@@ -559,10 +563,10 @@
         <h2>4) Third‑Party Services</h2>
         <h3>OpenAI (Image Processing)</h3>
         <ul>
-            <li>Purpose: Generate the elf transformation you request.</li>
+            <li>Purpose: Generate the elf transformation you request. Images containing face data are shared with OpenAI to perform this transformation.</li>
             <li>Transport: We proxy requests through our serverless Cloudflare Worker; your OpenAI key is <em>not</em> embedded in the app.</li>
-            <li>Policies: See OpenAI’s <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener">API Data Usage Policies</a>.</li>
-        </ul>
+            <li>Face Data Sharing: Images containing face data are transmitted to OpenAI's servers for processing. OpenAI processes these images according to their privacy policies and data usage policies.</li>
+            <li>Policies: See OpenAI's <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener">API Data Usage Policies</a> for information about how they handle face data.</li>        </ul>
         <h3>RevenueCat (Subscriptions)</h3>
         <ul>
             <li>Purpose: Manage in‑app purchases and entitlements.</li>
@@ -580,10 +584,11 @@
             <li><strong>Consent</strong> for Photos library access.</li>
         </ul>
 
-        <h2>6) Data Retention</h2>
+        <h3>Face Data Retention</h3>
         <ul>
-            <li><strong>Device storage:</strong> Images remain on your device until you delete them.</li>
-            <li><strong>Server processing:</strong> Images sent to OpenAI are processed transiently; we do not retain them server‑side.</li>
+            <li><strong>Device storage:</strong> Images containing face data remain on your device until you delete them from the in‑app gallery or Photos library. You have full control over when to delete these images.</li>
+            <li><strong>Server processing:</strong> Images containing face data sent to OpenAI are processed transiently for the purpose of generating the transformation. According to OpenAI's API Data Usage Policies, images are not used to train OpenAI's models and are deleted after processing. We do not retain images containing face data on our servers.</li>
+            <li><strong>Third-party retention:</strong> Face data shared with OpenAI is subject to OpenAI's data retention policies as described in their <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener">API Data Usage Policies</a>. We do not control OpenAI's retention periods.</li>
             <li><strong>Entitlements/diagnostics:</strong> Retained only as long as necessary for the purposes above.</li>
         </ul>
 
@@ -610,7 +615,7 @@
         <p><strong>Dvain Solutions</strong><br>
            Email: <a href="mailto:dvainsolutions@gmail.com">dvainsolutions@gmail.com</a></p>
         <hr>
-        <p><em>We do not sell personal data. We do not store biometric identifiers; images are processed solely to produce your requested output.</em></p>
+        <p><em>We do not sell personal data or face data. Face data contained in images is processed solely to produce your requested elf transformation output. We do not extract, store, or use biometric identifiers separately from the images you provide. Face data is shared with OpenAI only for the purpose of generating the transformation you request.</em></p>
     </div>
 
         <!-- Add more policy sections for additional apps -->
