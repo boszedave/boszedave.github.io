@@ -532,95 +532,96 @@
             <h1>Privacy Policy for Elf Maker</h1>
         </div>
 
-        <p><strong>Effective date:</strong> November 1, 2025</p>
-        <p>This Privacy Policy explains how <strong>Dvain Solutions</strong> ("we", "us", "our") collects, uses, and protects information when you use the Elf Maker mobile application ("App").</p>
+        <p><strong>Effective date:</strong> October 18, 2026</p>
+        <p><strong>Last updated:</strong> October 18, 2026</p>
+        <p>This Privacy Policy explains how <strong>Dvain Solutions / Dávid Bősze</strong> ("we", "us", "our") handles information when you use the Elf Maker mobile application ("App").</p>
 
-        <h2>1) Information We Collect</h2>
-        <h3>Images and Face Data You Choose to Upload</h3>
+        <h2>1) Information We Process</h2>
+        <h3>Photos and Face Data You Choose to Upload</h3>
         <ul>
-            <li>Only the photos you explicitly select are processed. These photos may contain facial features and biometric data (face data).</li>
-            <li>Images containing face data are prepared locally on your device and then sent via our secure proxy to our AI processing provider (OpenAI) to generate the elf transformation.</li>
-            <li>We do not collect or extract biometric identifiers separately from the images you provide. Face data is contained within the images you choose to upload.</li>
+            <li>We process only a photo you take or select and submit for an elf transformation. A submitted photo may contain a person's face.</li>
+            <li>The App resizes and compresses the selected photo on your device, then sends it through our Cloudflare Worker to OpenAI to create the requested image.</li>
+            <li>We do not use facial recognition, identify the person in a photo, or create a biometric identifier or biometric template.</li>
         </ul>
-        <h3>Subscription Status</h3>
+        <h3>Purchases, Anonymous Identifier, and Usage</h3>
         <ul>
-            <li>We receive non-sensitive entitlement information (e.g., active/expired) from RevenueCat. We do not receive full payment details.</li>
+            <li>RevenueCat processes purchase history, subscription status, entitlements, and an anonymous app user identifier so the App can provide and restore paid access.</li>
+            <li>After a successful generation, we send RevenueCat limited usage attributes: the last usage date, lifetime or monthly generation count, and the applicable month. These attributes support usage analytics and service operation.</li>
+            <li>Apple processes payments. We do not receive your full payment-card or bank-account details.</li>
         </ul>
-        <h3>Analytics and Diagnostics</h3>
+        <h3>Operational and Diagnostic Data</h3>
         <ul>
-            <li>Basic, non-identifying diagnostics (feature usage, crashes) and generic device info (model, OS version) to improve reliability.</li>
+            <li>Our Cloudflare Worker records a generation event, success or failure outcome, response status, processing duration, whether OpenAI was contacted, model configuration, and estimated generation cost.</li>
+            <li>These custom logs do not contain the uploaded photo, prompt, filename, client IP address, or RevenueCat user identifier.</li>
+            <li>Cloudflare receives your IP address as part of providing the network service. The Worker uses it temporarily to apply a six-generation-per-minute abuse-prevention limit, but does not write it to our custom logs.</li>
         </ul>
+        <h3>Support Communications</h3>
+        <p>If you contact us, we receive the email address, message, and any information you voluntarily include, solely to respond to and manage your request.</p>
 
-        <h2>2) How Your Images and Face Data Are Used</h2>
-        <h3>Face Data Collection and Use</h3>
+        <h2>2) How We Use Information</h2>
         <ul>
-            <li><strong>Collection:</strong> Face data is collected only when you explicitly choose to upload a photo containing facial features. We do not automatically detect or collect face data from your device.</li>
-            <li><strong>Purpose:</strong> Face data is used solely to generate the requested elf transformation while keeping the person's face recognizable in the transformed image.</li>
-            <li><strong>On-device processing:</strong> Selected photos containing face data are resized and optimized locally on your device before transmission.</li>
-            <li><strong>Cloud processing:</strong> Images containing face data are transmitted to OpenAI's API through our secure Cloudflare Worker proxy solely to generate the transformation. The transformation process requires face data to create a recognizable elf version of the person in the image.</li>
-            <li><strong>Storage:</strong> Transformed images (which may contain face data) and original images are stored <em>locally on your device</em> for your in‑app gallery. Images are saved to your Photos library only if you tap <em>Save to Photos</em>.</li>
-            <li><strong>Servers:</strong> We do not persist images containing face data on our servers. OpenAI processes your images transiently (see Third‑Party Services and Data Retention sections).</li>
-        </ul>
-
-        <h2>3) Subscriptions, “Unlimited” Access, and Fair Use</h2>
-        <p>Premium subscriptions advertise “unlimited” access; unlimited generations are subject to fair use and may be throttled to prevent abuse.</p>
-
-        <h2>4) Third‑Party Services</h2>
-        <h3>OpenAI (Image Processing)</h3>
-        <ul>
-            <li>Purpose: Generate the elf transformation you request. Images containing face data are shared with OpenAI to perform this transformation.</li>
-            <li>Transport: We proxy requests through our serverless Cloudflare Worker; your OpenAI key is <em>not</em> embedded in the app.</li>
-            <li>Face Data Sharing: Images containing face data are transmitted to OpenAI's servers for processing. OpenAI processes these images according to their privacy policies and data usage policies.</li>
-            <li>Policies: See OpenAI's <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener">API Data Usage Policies</a> for information about how they handle face data.</li>        </ul>
-        <h3>RevenueCat (Subscriptions)</h3>
-        <ul>
-            <li>Purpose: Manage in‑app purchases and entitlements.</li>
-            <li>Policy: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
-        </ul>
-        <h3>Apple (App Store & Photos)</h3>
-        <ul>
-            <li>Payments are handled by Apple. Photos access is requested only to save images when you choose to do so.</li>
+            <li>Generate the elf transformation you request.</li>
+            <li>Provide, verify, and restore subscriptions and entitlements.</li>
+            <li>Apply generation limits and prevent abuse.</li>
+            <li>Monitor reliability, diagnose failures, understand aggregate usage, and control service costs.</li>
+            <li>Respond to support and privacy requests.</li>
         </ul>
 
-        <h2>5) Legal Bases (EEA/UK)</h2>
+        <h2>3) Image Processing and Local Storage</h2>
         <ul>
-            <li><strong>Performance of contract</strong> to provide requested transformations.</li>
-            <li><strong>Legitimate interests</strong> for reliability, abuse prevention, and analytics.</li>
-            <li><strong>Consent</strong> for Photos library access.</li>
+            <li><strong>Cloud processing:</strong> The selected photo is sent to OpenAI through our Cloudflare Worker solely to produce the requested transformation.</li>
+            <li><strong>Our server:</strong> The Worker forwards the photo for processing and returns the result. We do not intentionally persist the original or generated photo in our own database or custom logs.</li>
+            <li><strong>On your device:</strong> The original and transformed images are stored in the App's local gallery until you delete them. A transformed image is added to your Photos library only when you choose <em>Save to Photos</em>.</li>
         </ul>
 
-        <h3>Face Data Retention</h3>
+        <h2>4) Third-Party Services</h2>
+        <h3>OpenAI</h3>
+        <p>OpenAI receives the submitted photo and transformation instructions to generate the result. OpenAI states that API data is not used to train its models by default. Under OpenAI's default API controls, abuse-monitoring logs may contain customer content and may be retained for up to 30 days, unless longer retention is required by law or necessary to protect the service or others. Images flagged as potential child sexual abuse material may be retained for manual review, including when special retention controls are enabled. See OpenAI's <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">API Data Controls</a>.</p>
+        <h3>Cloudflare</h3>
+        <p>Cloudflare provides the serverless proxy, network security, short-term IP rate limiting, and operational logs. Cloudflare Workers Logs may retain our custom diagnostic events for up to seven days, depending on the account plan. See Cloudflare's <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        <h3>RevenueCat</h3>
+        <p>RevenueCat processes the anonymous app user identifier, purchase history, entitlements, subscription status, and limited generation-usage attributes described above. See RevenueCat's <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        <h3>Apple</h3>
+        <p>Apple provides the App Store, processes payments, manages subscriptions, provides camera and Photos permissions, and displays the system review prompt. Apple's handling is governed by its <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+
+        <h2>5) Data Retention</h2>
         <ul>
-            <li><strong>Device storage:</strong> Images containing face data remain on your device until you delete them from the in‑app gallery or Photos library. You have full control over when to delete these images.</li>
-            <li><strong>Server processing:</strong> Images containing face data sent to OpenAI are processed transiently for the purpose of generating the transformation. According to OpenAI's API Data Usage Policies, images are not used to train OpenAI's models and are deleted after processing. We do not retain images containing face data on our servers.</li>
-            <li><strong>Third-party retention:</strong> Face data shared with OpenAI is subject to OpenAI's data retention policies as described in their <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener">API Data Usage Policies</a>. We do not control OpenAI's retention periods.</li>
-            <li><strong>Entitlements/diagnostics:</strong> Retained only as long as necessary for the purposes above.</li>
+            <li><strong>Local images:</strong> Remain in the App's gallery until you delete them. Images you save to Photos must be deleted separately from the Photos app.</li>
+            <li><strong>OpenAI:</strong> API abuse-monitoring logs may be retained for up to 30 days by default, subject to the exceptions described above and in OpenAI's current documentation.</li>
+            <li><strong>Cloudflare diagnostics:</strong> Custom Worker logs may be retained for up to seven days. The IP-based rate-limit key is used for the short rate-limit window and is not included in our custom logs.</li>
+            <li><strong>RevenueCat:</strong> Purchase, entitlement, anonymous identifier, and usage-attribute retention is governed by RevenueCat's retention practices and our operational need to provide and restore purchases.</li>
+            <li><strong>Support:</strong> Support and privacy-request correspondence is retained only as long as reasonably necessary to resolve the request and maintain appropriate records.</li>
         </ul>
 
-        <h2>7) Children’s Privacy</h2>
-        <p>ElfMaker is not directed to children under 13 (or the minimum age in your jurisdiction). Do not use the App if you are under the applicable age.</p>
-
-        <h2>8) Your Choices</h2>
+        <h2>6) Your Choices and Requests</h2>
         <ul>
-            <li>Manage Photos permissions in iOS Settings.</li>
-            <li>Delete images from the in‑app gallery and Photos at any time.</li>
-            <li>Cancel subscriptions via the App Store.</li>
+            <li>Choose whether to take or select a photo and whether to submit it for transformation.</li>
+            <li>Manage Camera and Photos permissions in iOS Settings.</li>
+            <li>Delete original and transformed images from the in-app gallery, and separately delete exported images from Photos.</li>
+            <li>Manage or cancel subscriptions through your Apple App Store account.</li>
+            <li>Request access, correction, or deletion of information we control by emailing <a href="mailto:dvainsolutions@gmail.com?subject=Elf%20Maker%20Privacy%20Request">dvainsolutions@gmail.com</a>. Because the App does not require an account, we may need limited information to locate an anonymous purchase record, and in some cases we may be unable to associate an anonymous record with you.</li>
+        </ul>
+        <p>We do not sell personal data, show third-party advertising, or use app data to track you across other companies' apps or websites.</p>
+
+        <h2>7) Legal Bases for EEA and UK Users</h2>
+        <ul>
+            <li><strong>Performance of a contract or requested service:</strong> to generate images and provide subscription features.</li>
+            <li><strong>Legitimate interests:</strong> to protect the service, prevent abuse, monitor reliability, understand aggregate usage, and respond to support requests.</li>
+            <li><strong>Consent where required:</strong> for system permissions or other processing where applicable. You can withdraw a device permission in iOS Settings.</li>
         </ul>
 
-        <h2>9) Security</h2>
-        <p>We use encryption in transit, least‑privilege access, and serverless secret management. No method is 100% secure.</p>
+        <h2>8) Children’s Privacy</h2>
+        <p>Elf Maker is not directed to children under 13 or the applicable minimum age in a user's jurisdiction. Do not submit a child's photo unless you are authorized to do so as their parent, guardian, or otherwise under applicable law.</p>
 
-        <h2>10) International Transfers</h2>
-        <p>Processing may occur on infrastructure outside your country. We use providers with appropriate safeguards.</p>
+        <h2>9) Security and International Processing</h2>
+        <p>We use transport encryption and server-side secret management, but no method of processing is completely secure. OpenAI, Cloudflare, RevenueCat, and Apple may process information in countries other than your own, subject to their respective safeguards and policies.</p>
 
-        <h2>11) Changes</h2>
-        <p>We may update this Policy. Material changes will be communicated in‑app or on our site. Continued use signifies acceptance.</p>
+        <h2>10) Changes</h2>
+        <p>We may update this Policy as the App or its providers change. We will update the date above and provide additional notice when required.</p>
 
-        <h2>12) Contact</h2>
-        <p><strong>Dvain Solutions</strong><br>
+        <h2>11) Contact</h2>
+        <p><strong>Dvain Solutions / Dávid Bősze</strong><br>
            Email: <a href="mailto:dvainsolutions@gmail.com">dvainsolutions@gmail.com</a></p>
-        <hr>
-        <p><em>We do not sell personal data or face data. Face data contained in images is processed solely to produce your requested elf transformation output. We do not extract, store, or use biometric identifiers separately from the images you provide. Face data is shared with OpenAI only for the purpose of generating the transformation you request.</em></p>
     </div>
 
         <!-- Dr. Me Privacy Policy -->
